@@ -69,7 +69,6 @@ library(magick)
 library(cowplot)
 library(rms)
 
-options("encoding" = "UTF-8")
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
 list("style_number-arg:big.mark" = "") %>%
@@ -77,7 +76,7 @@ list("style_number-arg:big.mark" = "") %>%
 ```
 
 ```{r data_import}
-trans <- read_csv("D:/MyDocuments/Kaggle/Kkbox/data/trans_sample.csv", 
+trans <- read_csv("~/data/trans_sample.csv", 
                   col_types = cols(transaction_date = col_date(),
                                    membership_expire_date = col_date(),
                                    is_cancel = col_logical(),
@@ -87,7 +86,7 @@ trans <- distinct(trans) %>%
   mutate(payment_method_id = fct_infreq(payment_method_id)) %>%
   arrange(msno, transaction_date)
 
-members <- read_csv("D:/MyDocuments/Kaggle/Kkbox/data/members_sample.csv",
+members <- read_csv("~/data/members_sample.csv",
                     col_types = cols(registration_init_time = col_date(),
                                      city = col_factor(),
                                      gender = col_factor(),
@@ -102,7 +101,7 @@ members <- members %>%
          month_reg = factor(month(registration_init_time),
                             labels = month.abb))
 
-ulogs <- read_csv("D:/MyDocuments/Kaggle/Kkbox/data/ulogs_sample.csv",
+ulogs <- read_csv("~/data/ulogs_sample.csv",
                   col_types = cols(date = col_date("%Y%m%d")))
 ulogs$num_tot <- pmap_dbl(ulogs[, paste0("num_", c(25,50,75,985,100))], sum)
 ulogs <- ulogs %>%
