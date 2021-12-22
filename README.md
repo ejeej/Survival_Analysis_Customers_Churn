@@ -1,4 +1,4 @@
-# Predicting customers' churn with survival analysis, including time-dependent variables
+# Predicting customers' churn with survival analysis
 
 This study project was aimed at prediction of the probability of customers’ attrition (churn) with methods from survival analysis. In comparison with standard classification approaches resulted in prediction of churn as a binary target variable or probability of churn over some fixed period of time, survival analysis can be useful in understanding the dynamic of customer retention and attrition over time after some starting point (usually the start of relationship - contract, subscription, etc.). It can help in answering such questions as when clients churn the most, whether there are periods of increasing, stable or decreasing churn rates, as well as whether these all are different depending on customers’ characteristics, their behavior or some contract options.
 
