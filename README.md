@@ -11,7 +11,7 @@ I used models from both statistical analysis and machine learning, as well as bo
 
 Exploratory data analysis and feature engineering were realized in R (see [Kaggle_kkbox_part1_EDA.R](scripts/Kaggle_kkbox_part1_EDA.R), as well as data preparation for both [time-independent](scripts/Kaggle_kkbox_part2_Time-independent.R) and [time-dependent](scripts/Kaggle_kkbox_part3_Time-dependent.R) models.
 
-Train/test split and estimation of the models with time-independent variables were done using library `scikit-survival` in Python (through `reticulate` in R Notebook). For convenience, all Python chunks were saved in separate [Kaggle_kkbox_survival.py](scripts/Kaggle_kkbox_survival.py) file.
+Train/test split and estimation of the models with time-independent variables were done using library `scikit-survival` in Python (through `reticulate` in R Notebook). For convenience, all Python chunks were saved in separate [Kaggle_kkbox_part2_Time-independent.py](scripts/Kaggle_kkbox_part2_Time-independent.py) file.
 
 Models with time-dependent variables were estimated using libraries `survival` and `LTRCforest` in R (see [Kaggle_kkbox_part3_Time-dependent.R](scripts/Kaggle_kkbox_part3_Time-dependent.R)).
 
