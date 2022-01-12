@@ -9,9 +9,9 @@ I used models from both statistical analysis and machine learning, as well as bo
 
 2 Files for transactions and 2 files for user logs given in the competition were combined into seperate files and cleaned of duplicates. After that I found the list of unique users' IDs which occured in transactions, user logs and membership files simultaneously - and made a random sample of 1% of them (19200 users). Their IDs could be found in [msno_sample.csv](data/msno_sample.csv) file. In my project I used data for only these users. As the dataset was still large in volume, I could not upload it here. But all data can be obtained by the given IDs. I did it using SQL.
 
-Exploratory data analysis and feature engineering were realized in R (see [Kaggle_kkbox_part1_EDA.R](scripts/Kaggle_kkbox_part1_EDA.R), as well as data preparation for both [time-independent](scripts/Kaggle_kkbox_part3_Time-independent.R) and [time-dependent](scripts/Kaggle_kkbox_part3_Time-independent.R) models.
+Exploratory data analysis and feature engineering were realized in R (see [Kaggle_kkbox_part1_EDA.R](scripts/Kaggle_kkbox_part1_EDA.R), as well as data preparation for both [time-independent](scripts/Kaggle_kkbox_part2_Time-independent.R) and [time-dependent](scripts/Kaggle_kkbox_part3_Time-dependent.R) models.
 
-Train/test split and estimation of the models with time-independent variables were done using library `scikit-survival` in Python (through `reticulate` in R Notebook, see [Kaggle_kkbox_survival.py](scripts/Kaggle_kkbox_survival.py)).
+Train/test split and estimation of the models with time-independent variables were done using library `scikit-survival` in Python (through `reticulate` in R Notebook). For convenience, all Python chunks were saved in separate [Kaggle_kkbox_survival.py](scripts/Kaggle_kkbox_survival.py) file.
 
 Models with time-dependent variables were estimated using libraries `survival` and `LTRCforest` in R (see [Kaggle_kkbox_part3_Time-dependent.R](scripts/Kaggle_kkbox_part3_Time-dependent.R)).
 
