@@ -7,6 +7,16 @@ The criteria of churn used in the competition is no new valid service subscripti
 I used the same definition, although I was predicting not just the probability of churn during the next 30 days after membership expiration as a binary outcome, but the distribution of time to churn and retention rates for different time points after the start of subscription. 
 I used models from both statistical analysis and machine learning, as well as both baseline features (available at the start of subscription) and time-dependent variables (information on user’s behavior during subscription).
 
-Models with time-independent variables were estimated using library `scikit-survival` in Python (through `reticulate` in R Notebook), models with time-dependent variables - using libraries `survival` and `LTRCforest` in R.
+2 Files for transactions and 2 files for user logs given in the competition were combined into seperate files and cleaned of duplicates. After that I found the list of unique users' IDs which occured in transactions, user logs and membership files simultaneously - and made a random sample of 1% of them (19200 users). Their IDs could be found in [msno_sample.csv](data/msno_sample.csv) file. In my project I used data for only these users. As the dataset was still large in volume, I could not upload it here. But all data can be obtained by the given IDs. I did it using SQL.
 
-The full text with literature survey and results, as well as with all code chunks can be found in [Kaggle_kkbox_survival.html](https://github.com/ejeej/Survival_Analysis_Customers_Churn/blob/main/Kaggle_kkbox_survival.html) file (in English), which was published at [Rpubs](https://rpubs.com/omironenko/survival_churn). Presentation of the main project ideas and results is in [Churn_Prediction_Survival_inRussian.pptx](https://github.com/ejeej/Survival_Analysis_Customers_Churn/blob/main/Churn_Prediction_Survival_inRussian.pptx) file (in Russian).
+Exploratory data analysis and feature engineering were realized in R (see [Kaggle_kkbox_part1_EDA.R](scripts/Kaggle_kkbox_part1_EDA.R), as well as data preparation for both [time-independent](scripts/Kaggle_kkbox_part3_Time-independent.R) and [time-dependent](scripts/Kaggle_kkbox_part3_Time-independent.R) models.
+
+Train/test split and estimation of the models with time-independent variables were done using library `scikit-survival` in Python (through `reticulate` in R Notebook, see [Kaggle_kkbox_survival.py](scripts/Kaggle_kkbox_survival.py)).
+
+Models with time-dependent variables were estimated using libraries `survival` and `LTRCforest` in R (see [Kaggle_kkbox_part3_Time-dependent.R](scripts/Kaggle_kkbox_part3_Time-dependent.R)).
+
+Variable importance in Cox regressions was calculated as a proportion of explainable log-likelihood using functions in `rms` package for R, in random survival forests - using a permutation method in `sklearn` package for Python.
+
+The full text with literature survey and results, as well as with all code chunks for R and Python can be found in [Kaggle_kkbox_survival.html](Kaggle_kkbox_survival.html) file (in English). It was obtained from R Notebook [Kaggle_kkbox_survival.Rmd](Kaggle_kkbox_survival.Rmd) and published at [Rpubs](https://rpubs.com/omironenko/survival_churn). 
+
+Presentation of the main project ideas and results can be found in [Churn_Prediction_Survival_inRussian.pptx](Churn_Prediction_Survival_inRussian.pptx) file (in Russian).
