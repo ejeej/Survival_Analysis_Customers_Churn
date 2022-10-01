@@ -20,3 +20,12 @@ Variable importance in Cox regressions was calculated as a proportion of explain
 The full text with literature survey and results, as well as with all code chunks for R and Python can be found in [Kaggle_kkbox_survival.html](Kaggle_kkbox_survival.html) file (in English). It was obtained from R Notebook [Kaggle_kkbox_survival.Rmd](Kaggle_kkbox_survival.Rmd) and published at [Rpubs](https://rpubs.com/omironenko/survival_churn). 
 
 Presentation of the main project ideas and results can be found in [Churn_Prediction_Survival_inRussian.pptx](Churn_Prediction_Survival_inRussian.pptx) file (in Russian).
+
+<p float="left">
+<img src="https://user-images.githubusercontent.com/9775181/193412532-4cc79df7-859e-4865-aa98-24b3ff8059fd.png" width="500" height="300">
+<img src="https://user-images.githubusercontent.com/9775181/193412493-b0ad46e0-8ef6-44ab-8ce5-68e7fe79049f.png" width="400" height="300">
+</p>
+<p float="left">
+<img src="https://user-images.githubusercontent.com/9775181/193412797-b99b365c-a5e0-45bc-b0f1-b93455da7513.png" width="500" height="300">
+<img src="https://user-images.githubusercontent.com/9775181/193412506-48dc6e6f-0c15-4119-a047-aa24dd088a88.png" width="400" height="300">
+</p>
