@@ -1,4 +1,4 @@
-* linguist-vendored
+*.html linguist-detectable=false
 *.py linguist-detectable=true
 *.[Rr] linguist-detectable=true
 *.[Rr]md linguist-detectable=true
